@@ -23,11 +23,11 @@ jobs:
           # lub jeśli nie masz requirements.txt: 
           # pip install transformers datasets accelerate
 
-      - name: Download model from HF Hub (opcjonalnie)
-        # Jeśli model jest publiczny i dostępny przez Transformers, nie musisz nic robić,
-        # Transformers ściągną model automatycznie przy pierwszym użyciu.
-        # W innym przypadku – np. autoryzacja:
-        run: huggingface-cli login --token ${{ secrets.HF_TOKEN }}
+      # - name: Download model from HF Hub (opcjonalnie)
+      # Jeśli model jest publiczny i dostępny przez Transformers, nie musisz nic robić,
+      # Transformers ściągną model automatycznie przy pierwszym użyciu.
+      # W innym przypadku – np. autoryzacja:
+      # run: huggingface-cli login --token ${{ secrets.HF_TOKEN }}
 
       - name: Start fine-tuning
         run: |
